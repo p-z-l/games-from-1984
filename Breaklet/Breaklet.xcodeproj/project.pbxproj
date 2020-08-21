@@ -1,0 +1,400 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0016E7DA24F0066700B56746 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0016E7D924F0066700B56746 /* Score.swift */; };
+		0016E7DC24F013DD00B56746 /* ScoreBoardNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0016E7DB24F013DD00B56746 /* ScoreBoardNode.swift */; };
+		00733E6524F01BA90035A190 /* SKSpriteNode+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00733E6424F01BA90035A190 /* SKSpriteNode+Extension.swift */; };
+		B3312114248244D0009DB754 /* BreakBlockParticles.sks in Resources */ = {isa = PBXBuildFile; fileRef = B3312113248244D0009DB754 /* BreakBlockParticles.sks */; };
+		B3312119248248C6009DB754 /* BallTrail.sks in Resources */ = {isa = PBXBuildFile; fileRef = B3312117248248C6009DB754 /* BallTrail.sks */; };
+		B331211C24825B0D009DB754 /* GameStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B331211B24825B0D009DB754 /* GameStatus.swift */; };
+		B372CB9C247FD158008DEA68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B372CB9B247FD158008DEA68 /* AppDelegate.swift */; };
+		B372CB9E247FD158008DEA68 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = B372CB9D247FD158008DEA68 /* GameScene.sks */; };
+		B372CBA2247FD158008DEA68 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B372CBA1247FD158008DEA68 /* GameScene.swift */; };
+		B372CBA4247FD158008DEA68 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B372CBA3247FD158008DEA68 /* ViewController.swift */; };
+		B372CBA6247FD15A008DEA68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B372CBA5247FD15A008DEA68 /* Assets.xcassets */; };
+		B372CBA9247FD15A008DEA68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B372CBA7247FD15A008DEA68 /* Main.storyboard */; };
+		B372CBB2247FD1FF008DEA68 /* BlockSpriteNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B372CBB1247FD1FF008DEA68 /* BlockSpriteNode.swift */; };
+		B372CBB4247FD25C008DEA68 /* NSColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B372CBB3247FD25C008DEA68 /* NSColorExtension.swift */; };
+		B372CBB6247FDB80008DEA68 /* PaddleSpriteNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B372CBB5247FDB80008DEA68 /* PaddleSpriteNode.swift */; };
+		B39B4482247FE56300C35D59 /* BallSpriteNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39B4481247FE56300C35D59 /* BallSpriteNode.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0016E7D924F0066700B56746 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
+		0016E7DB24F013DD00B56746 /* ScoreBoardNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreBoardNode.swift; sourceTree = "<group>"; };
+		00733E6424F01BA90035A190 /* SKSpriteNode+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKSpriteNode+Extension.swift"; sourceTree = "<group>"; };
+		B3312113248244D0009DB754 /* BreakBlockParticles.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BreakBlockParticles.sks; sourceTree = "<group>"; };
+		B3312117248248C6009DB754 /* BallTrail.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BallTrail.sks; sourceTree = "<group>"; };
+		B331211B24825B0D009DB754 /* GameStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStatus.swift; sourceTree = "<group>"; };
+		B372CB98247FD158008DEA68 /* Breaklet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Breaklet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B372CB9B247FD158008DEA68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B372CB9D247FD158008DEA68 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		B372CBA1247FD158008DEA68 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		B372CBA3247FD158008DEA68 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B372CBA5247FD15A008DEA68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B372CBA8247FD15A008DEA68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B372CBAA247FD15A008DEA68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B372CBAB247FD15A008DEA68 /* Breakout.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Breakout.entitlements; sourceTree = "<group>"; };
+		B372CBB1247FD1FF008DEA68 /* BlockSpriteNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockSpriteNode.swift; sourceTree = "<group>"; };
+		B372CBB3247FD25C008DEA68 /* NSColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSColorExtension.swift; sourceTree = "<group>"; };
+		B372CBB5247FDB80008DEA68 /* PaddleSpriteNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddleSpriteNode.swift; sourceTree = "<group>"; };
+		B39B4481247FE56300C35D59 /* BallSpriteNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallSpriteNode.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B372CB95247FD158008DEA68 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B3312116248244E6009DB754 /* Particles */ = {
+			isa = PBXGroup;
+			children = (
+				B3312113248244D0009DB754 /* BreakBlockParticles.sks */,
+				B3312117248248C6009DB754 /* BallTrail.sks */,
+			);
+			path = Particles;
+			sourceTree = "<group>";
+		};
+		B372CB8F247FD158008DEA68 = {
+			isa = PBXGroup;
+			children = (
+				B372CB9A247FD158008DEA68 /* Breaklet */,
+				B372CB99247FD158008DEA68 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B372CB99247FD158008DEA68 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B372CB98247FD158008DEA68 /* Breaklet.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B372CB9A247FD158008DEA68 /* Breaklet */ = {
+			isa = PBXGroup;
+			children = (
+				B372CB9B247FD158008DEA68 /* AppDelegate.swift */,
+				B372CBA3247FD158008DEA68 /* ViewController.swift */,
+				B372CBA1247FD158008DEA68 /* GameScene.swift */,
+				B372CBB3247FD25C008DEA68 /* NSColorExtension.swift */,
+				B331211B24825B0D009DB754 /* GameStatus.swift */,
+				0016E7D924F0066700B56746 /* Score.swift */,
+				00733E6424F01BA90035A190 /* SKSpriteNode+Extension.swift */,
+				B372CB9D247FD158008DEA68 /* GameScene.sks */,
+				B372CBA7247FD15A008DEA68 /* Main.storyboard */,
+				B3312116248244E6009DB754 /* Particles */,
+				B39B4480247FE54C00C35D59 /* SpriteNodes */,
+				B372CBA5247FD15A008DEA68 /* Assets.xcassets */,
+				B372CBAA247FD15A008DEA68 /* Info.plist */,
+				B372CBAB247FD15A008DEA68 /* Breakout.entitlements */,
+			);
+			path = Breaklet;
+			sourceTree = "<group>";
+		};
+		B39B4480247FE54C00C35D59 /* SpriteNodes */ = {
+			isa = PBXGroup;
+			children = (
+				B372CBB1247FD1FF008DEA68 /* BlockSpriteNode.swift */,
+				B372CBB5247FDB80008DEA68 /* PaddleSpriteNode.swift */,
+				B39B4481247FE56300C35D59 /* BallSpriteNode.swift */,
+				0016E7DB24F013DD00B56746 /* ScoreBoardNode.swift */,
+			);
+			path = SpriteNodes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B372CB97247FD158008DEA68 /* Breaklet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B372CBAE247FD15A008DEA68 /* Build configuration list for PBXNativeTarget "Breaklet" */;
+			buildPhases = (
+				B372CB94247FD158008DEA68 /* Sources */,
+				B372CB95247FD158008DEA68 /* Frameworks */,
+				B372CB96247FD158008DEA68 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Breaklet;
+			productName = "Breaklet 2020";
+			productReference = B372CB98247FD158008DEA68 /* Breaklet.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B372CB90247FD158008DEA68 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1200;
+				ORGANIZATIONNAME = "Peter Luo";
+				TargetAttributes = {
+					B372CB97247FD158008DEA68 = {
+						CreatedOnToolsVersion = 11.4;
+					};
+				};
+			};
+			buildConfigurationList = B372CB93247FD158008DEA68 /* Build configuration list for PBXProject "Breaklet" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B372CB8F247FD158008DEA68;
+			productRefGroup = B372CB99247FD158008DEA68 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B372CB97247FD158008DEA68 /* Breaklet */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B372CB96247FD158008DEA68 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B372CB9E247FD158008DEA68 /* GameScene.sks in Resources */,
+				B3312119248248C6009DB754 /* BallTrail.sks in Resources */,
+				B372CBA6247FD15A008DEA68 /* Assets.xcassets in Resources */,
+				B372CBA9247FD15A008DEA68 /* Main.storyboard in Resources */,
+				B3312114248244D0009DB754 /* BreakBlockParticles.sks in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B372CB94247FD158008DEA68 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0016E7DC24F013DD00B56746 /* ScoreBoardNode.swift in Sources */,
+				B372CBB2247FD1FF008DEA68 /* BlockSpriteNode.swift in Sources */,
+				B331211C24825B0D009DB754 /* GameStatus.swift in Sources */,
+				B372CBA4247FD158008DEA68 /* ViewController.swift in Sources */,
+				00733E6524F01BA90035A190 /* SKSpriteNode+Extension.swift in Sources */,
+				B372CBB4247FD25C008DEA68 /* NSColorExtension.swift in Sources */,
+				B372CBA2247FD158008DEA68 /* GameScene.swift in Sources */,
+				B372CBB6247FDB80008DEA68 /* PaddleSpriteNode.swift in Sources */,
+				B39B4482247FE56300C35D59 /* BallSpriteNode.swift in Sources */,
+				0016E7DA24F0066700B56746 /* Score.swift in Sources */,
+				B372CB9C247FD158008DEA68 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B372CBA7247FD15A008DEA68 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B372CBA8247FD15A008DEA68 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B372CBAC247FD15A008DEA68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B372CBAD247FD15A008DEA68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		B372CBAF247FD15A008DEA68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Breakout/Breakout.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = VGURA84Q2L;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = Breaklet/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pzl.Breaklet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		B372CBB0247FD15A008DEA68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Breakout/Breakout.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = VGURA84Q2L;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = Breaklet/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pzl.Breaklet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B372CB93247FD158008DEA68 /* Build configuration list for PBXProject "Breaklet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B372CBAC247FD15A008DEA68 /* Debug */,
+				B372CBAD247FD15A008DEA68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B372CBAE247FD15A008DEA68 /* Build configuration list for PBXNativeTarget "Breaklet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B372CBAF247FD15A008DEA68 /* Debug */,
+				B372CBB0247FD15A008DEA68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B372CB90247FD158008DEA68 /* Project object */;
+}
