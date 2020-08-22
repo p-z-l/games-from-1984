@@ -130,7 +130,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     private func updateScoreBoardIfNeeded() {
         let scores = ScoreBoard.shared.scores
         let lastScore = (scores.last?.value) ?? 0
-        guard (scores.count <= 10) || (lastScore <= score) else {
+        guard (scores.count < 10) || (lastScore <= score) else {
             return
         }
         let playerName: String = {
