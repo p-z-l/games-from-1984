@@ -20,6 +20,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     private var asteroids: [SKSpriteNode] {
         return self.children.filter { $0.name == "asteroid" } as! [SKSpriteNode]
     }
+    private var bullets: [SKSpriteNode] {
+        return self.children.filter { $0.name == "bullet" } as! [SKSpriteNode]
+    }
     
     // MARK: - Life cycle
     
@@ -49,6 +52,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             spaceShipLeft()
         case 2: // d
             spaceShipRight()
+        case 38: // j
+            spaceShipFireBullet()
         default:
             break
         }
@@ -85,12 +90,26 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         spaceShipDirection += 10
     }
     
+    private func spaceShipFireBullet() {
+        let bulletNode = SKSpriteNode()
+        bulletNode.color = .white
+        bulletNode.size = CGSize(width: 2, height: 2)
+        bulletNode.physicsBody = SKPhysicsBody(rectangleOf: bulletNode.size)
+        bulletNode.physicsBody?.velocity = spaceShip.physicsBody?.velocity ?? .zero
+        bulletNode.position = spaceShip.position
+        bulletNode.physicsBody?.usesPreciseCollisionDetection = true
+        bulletNode.name = "bullet"
+        self.addChild(bulletNode)
+        bulletNode.physicsBody?.applyForce(CGVector(direction: spaceShipDirection, magnitude: 10))
+    }
+    
     private func spaceShipUpdateDirection() {
         spaceShip.zRotation = -spaceShipDirection * .pi / 180
     }
     
     private func keepNodesInsideScene() {
         for child in self.children {
+            guard child.name != "bullet" else { return }
             if child.position.x >= self.size.width/2 {
                 child.position.x = -self.size.width/2
             } else if child.position.x <= -self.size.width/2 {
@@ -115,7 +134,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let magnitude = CGFloat.random(in: 20...40)
             let dx = magnitude-CGFloat.random(in: 0...magnitude)
             let dy = magnitude-dx
-            print(dx,dy)
             return CGVector(dx: dx, dy: dy)
             }()
         asteroidNode.physicsBody?.angularVelocity = .random(in: -2...2)
