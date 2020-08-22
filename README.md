@@ -8,6 +8,6 @@ Re-creating classic Macintosh arcade games for modern macOS.
 *Availible games:*
 
 | **Name**  | **Status**      |
-|-----------|-----------------|
-| Breakout  | Mostly finished |
-| Asteroids | To-do           |
+|-----------|------------------|
+| Breakout  | Mostly finished  |
+| Asteroids | Work in progress |
