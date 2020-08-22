@@ -16,6 +16,7 @@
 		002035A924F131B8002F9ECE /* AsteroidsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002035A824F131B8002F9ECE /* AsteroidsTests.swift */; };
 		002035B424F131B8002F9ECE /* AsteroidsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002035B324F131B8002F9ECE /* AsteroidsUITests.swift */; };
 		002035C424F1395E002F9ECE /* CGVector+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002035C324F1395E002F9ECE /* CGVector+Extension.swift */; };
+		0056CAAA24F164CA00437E89 /* AsteroidClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0056CAA924F164CA00437E89 /* AsteroidClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		002035B324F131B8002F9ECE /* AsteroidsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidsUITests.swift; sourceTree = "<group>"; };
 		002035B524F131B8002F9ECE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		002035C324F1395E002F9ECE /* CGVector+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGVector+Extension.swift"; sourceTree = "<group>"; };
+		0056CAA924F164CA00437E89 /* AsteroidClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				0020358F24F131B7002F9ECE /* AppDelegate.swift */,
 				0020359124F131B7002F9ECE /* GameScene.sks */,
 				0020359524F131B7002F9ECE /* GameScene.swift */,
+				0056CAA924F164CA00437E89 /* AsteroidClass.swift */,
 				002035C324F1395E002F9ECE /* CGVector+Extension.swift */,
 				0020359724F131B7002F9ECE /* ViewController.swift */,
 				0020359924F131B8002F9ECE /* Assets.xcassets */,
@@ -267,6 +270,7 @@
 				0020359824F131B7002F9ECE /* ViewController.swift in Sources */,
 				0020359624F131B7002F9ECE /* GameScene.swift in Sources */,
 				0020359024F131B7002F9ECE /* AppDelegate.swift in Sources */,
+				0056CAAA24F164CA00437E89 /* AsteroidClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
