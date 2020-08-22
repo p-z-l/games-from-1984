@@ -26,7 +26,14 @@ class ScoreBoardNode: SKSpriteNode {
         self.zPosition = 200
     }
     
+    private var rowNodes: [SKShapeNode] {
+        return self.children.filter { $0.name == "rowNode" } as! [SKShapeNode]
+    }
+    
     func updateData() {
+        for rowNode in rowNodes {
+            rowNode.removeFromParent()
+        }
         let scores = ScoreBoard.shared.scores
         drawRow(index: 0, scoreText: "Score", nameText: "PlayerName")
         for i in 0..<scores.count {

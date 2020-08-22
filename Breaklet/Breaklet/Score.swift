@@ -52,25 +52,21 @@ class ScoreBoard: NSObject {
     }
     
     func insert(_ score: Score) {
-        guard scores.count >= 10 else {
+        if (score >= scores.last!) || scores.count<=10 {
             scores.append(score)
-            return
-        }
-        if score >= scores.last! {
-            scores.append(score)
-            scores.sort()
-            scores.removeLast()
+            scores.sort { (lhs, rhs) -> Bool in
+                return lhs.value > rhs.value
+            }
+            if scores.count > 10 {
+                scores.removeLast()
+            }
+            print(scores)
         }
     }
     
     func saveToUserDefaults() {
-        for i in 0..<10 {
-            guard i < scores.count else {
-                for indexToRemove in i..<10 {
-                    UserDefaults.standard.removeObject(forKey: "HighScore_\(indexToRemove)")
-                }
-                return
-            }
+        for i in 0..<scores.count {
+            guard i < 10 else { return }
             let score = scores[i]
             let encoder = JSONEncoder()
             if let encoded = try? encoder.encode(score) {

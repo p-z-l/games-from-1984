@@ -40,7 +40,7 @@
 		B372CBA5247FD15A008DEA68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B372CBA8247FD15A008DEA68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B372CBAA247FD15A008DEA68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B372CBAB247FD15A008DEA68 /* Breakout.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Breakout.entitlements; sourceTree = "<group>"; };
+		B372CBAB247FD15A008DEA68 /* Breaklet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Breaklet.entitlements; sourceTree = "<group>"; };
 		B372CBB1247FD1FF008DEA68 /* BlockSpriteNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockSpriteNode.swift; sourceTree = "<group>"; };
 		B372CBB3247FD25C008DEA68 /* NSColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSColorExtension.swift; sourceTree = "<group>"; };
 		B372CBB5247FDB80008DEA68 /* PaddleSpriteNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddleSpriteNode.swift; sourceTree = "<group>"; };
@@ -99,7 +99,7 @@
 				B39B4480247FE54C00C35D59 /* SpriteNodes */,
 				B372CBA5247FD15A008DEA68 /* Assets.xcassets */,
 				B372CBAA247FD15A008DEA68 /* Info.plist */,
-				B372CBAB247FD15A008DEA68 /* Breakout.entitlements */,
+				B372CBAB247FD15A008DEA68 /* Breaklet.entitlements */,
 			);
 			path = Breaklet;
 			sourceTree = "<group>";
@@ -335,7 +335,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Breakout/Breakout.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Breaklet/Breaklet.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -356,7 +356,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Breakout/Breakout.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Breaklet/Breaklet.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
