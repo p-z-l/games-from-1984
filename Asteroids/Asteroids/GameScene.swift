@@ -42,6 +42,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         for _ in 0...3 {
             generateRandomAsteroid(sizeClass: .large)
         }
+        
+        for child in self.children {
+            child.physicsBody?.linearDamping = 0
+            child.physicsBody?.angularDamping = 0
+        }
     }
     
     override func update(_ currentTime: TimeInterval) {
