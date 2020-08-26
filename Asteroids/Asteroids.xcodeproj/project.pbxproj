@@ -18,6 +18,7 @@
 		002035C424F1395E002F9ECE /* CGVector+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002035C324F1395E002F9ECE /* CGVector+Extension.swift */; };
 		0056CAAA24F164CA00437E89 /* AsteroidClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0056CAA924F164CA00437E89 /* AsteroidClass.swift */; };
 		0080219224F68D6700432250 /* AsteroidNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0080219124F68D6700432250 /* AsteroidNode.swift */; };
+		0080219424F6AC8600432250 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0080219324F6AC8600432250 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		002035C324F1395E002F9ECE /* CGVector+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGVector+Extension.swift"; sourceTree = "<group>"; };
 		0056CAA924F164CA00437E89 /* AsteroidClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidClass.swift; sourceTree = "<group>"; };
 		0080219124F68D6700432250 /* AsteroidNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidNode.swift; sourceTree = "<group>"; };
+		0080219324F6AC8600432250 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 		0020358324F131B7002F9ECE = {
 			isa = PBXGroup;
 			children = (
+				0080219324F6AC8600432250 /* README.md */,
 				0020358E24F131B7002F9ECE /* Asteroids */,
 				002035A724F131B8002F9ECE /* AsteroidsTests */,
 				002035B224F131B8002F9ECE /* AsteroidsUITests */,
@@ -244,6 +247,7 @@
 			files = (
 				0020359224F131B7002F9ECE /* GameScene.sks in Resources */,
 				0020359A24F131B8002F9ECE /* Assets.xcassets in Resources */,
+				0080219424F6AC8600432250 /* README.md in Resources */,
 				0020359D24F131B8002F9ECE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

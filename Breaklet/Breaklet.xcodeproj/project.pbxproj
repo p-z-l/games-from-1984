@@ -10,6 +10,7 @@
 		0016E7DA24F0066700B56746 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0016E7D924F0066700B56746 /* Score.swift */; };
 		0016E7DC24F013DD00B56746 /* ScoreBoardNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0016E7DB24F013DD00B56746 /* ScoreBoardNode.swift */; };
 		00733E6524F01BA90035A190 /* SKSpriteNode+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00733E6424F01BA90035A190 /* SKSpriteNode+Extension.swift */; };
+		0080219624F6AC9000432250 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0080219524F6AC9000432250 /* README.md */; };
 		B3312114248244D0009DB754 /* BreakBlockParticles.sks in Resources */ = {isa = PBXBuildFile; fileRef = B3312113248244D0009DB754 /* BreakBlockParticles.sks */; };
 		B3312119248248C6009DB754 /* BallTrail.sks in Resources */ = {isa = PBXBuildFile; fileRef = B3312117248248C6009DB754 /* BallTrail.sks */; };
 		B331211C24825B0D009DB754 /* GameStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B331211B24825B0D009DB754 /* GameStatus.swift */; };
@@ -29,6 +30,7 @@
 		0016E7D924F0066700B56746 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		0016E7DB24F013DD00B56746 /* ScoreBoardNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreBoardNode.swift; sourceTree = "<group>"; };
 		00733E6424F01BA90035A190 /* SKSpriteNode+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKSpriteNode+Extension.swift"; sourceTree = "<group>"; };
+		0080219524F6AC9000432250 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B3312113248244D0009DB754 /* BreakBlockParticles.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BreakBlockParticles.sks; sourceTree = "<group>"; };
 		B3312117248248C6009DB754 /* BallTrail.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BallTrail.sks; sourceTree = "<group>"; };
 		B331211B24825B0D009DB754 /* GameStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStatus.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 		B372CB8F247FD158008DEA68 = {
 			isa = PBXGroup;
 			children = (
+				0080219524F6AC9000432250 /* README.md */,
 				B372CB9A247FD158008DEA68 /* Breaklet */,
 				B372CB99247FD158008DEA68 /* Products */,
 			);
@@ -173,6 +176,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0080219624F6AC9000432250 /* README.md in Resources */,
 				B372CB9E247FD158008DEA68 /* GameScene.sks in Resources */,
 				B3312119248248C6009DB754 /* BallTrail.sks in Resources */,
 				B372CBA6247FD15A008DEA68 /* Assets.xcassets in Resources */,
