@@ -270,8 +270,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 velocity: {
                     let baseDx = asteroid.physicsBody!.velocity.dx
                     let baseDy = asteroid.physicsBody!.velocity.dy
-                    let xRandomOffset: CGFloat = .random(in: -10...10)
-                    let yRandomOffset: CGFloat = .random(in: -10...10)
+                    let xRandomOffset: CGFloat = .random(in: -100...100)
+                    let yRandomOffset: CGFloat = .random(in: -100...100)
                     return CGVector(
                         dx: baseDx + xRandomOffset,
                         dy: baseDy + yRandomOffset
