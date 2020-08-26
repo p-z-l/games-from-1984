@@ -29,6 +29,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     private var isTurningRight      = false
     private var framesSinceLastFire = 0
     private let spaceShipFireTimeInterval = 20
+    // bitmasks
+    private let spaceShipCatagory : UInt32 = 0x1 << 0
+    private let asteroidsCatagory : UInt32 = 0x1 << 1
+    private let bulletsCatagory   : UInt32 = 0x1 << 2
     
     // MARK: - Life cycle
     
@@ -86,6 +90,32 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
+    // MARK: - SKPhysicsContactDelegate
+    func didBegin(_ contact: SKPhysicsContact) {
+        
+        var firstBody: SKPhysicsBody
+        var secondBody: SKPhysicsBody
+        if contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask {
+            firstBody = contact.bodyA
+            secondBody = contact.bodyB
+        } else {
+            firstBody = contact.bodyB
+            secondBody = contact.bodyA
+        }
+        
+        // if a bullet hits an asteroid...
+        if firstBody.node?.name == "bullet" && secondBody.node?.name == "asteroid" {
+            firstBody.node?.removeFromParent()
+            secondBody.node?.removeFromParent()
+        }
+        
+        // if the space ship hits an asteroid...
+        if firstBody.node?.name == "spaceShip" && secondBody.node?.name == "asteroid" {
+            NSApp.terminate(self)
+        }
+        
+    }
+    
     // MARK: - Private methods
     
     private func initializeScene() {
@@ -101,6 +131,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         spaceShip.physicsBody = SKPhysicsBody(texture: spaceShip.texture!, size: spaceShip.size)
         spaceShip.physicsBody?.mass = 0.01
         spaceShip.physicsBody?.allowsRotation = false
+        spaceShip.physicsBody?.categoryBitMask = spaceShipCatagory
+        spaceShip.physicsBody?.collisionBitMask = asteroidsCatagory
+        spaceShip.physicsBody?.contactTestBitMask = asteroidsCatagory
         self.addChild(spaceShip)
     }
     
@@ -143,6 +176,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         bulletNode.physicsBody?.velocity = spaceShip.physicsBody?.velocity ?? .zero
         bulletNode.position = spaceShip.position
         bulletNode.physicsBody?.usesPreciseCollisionDetection = true
+        bulletNode.physicsBody?.categoryBitMask = bulletsCatagory
+        bulletNode.physicsBody?.collisionBitMask = asteroidsCatagory
+        bulletNode.physicsBody?.contactTestBitMask = asteroidsCatagory
         bulletNode.name = "bullet"
         self.addChild(bulletNode)
         bulletNode.physicsBody?.applyForce(CGVector(direction: spaceShipDirection, magnitude: 10))
