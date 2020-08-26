@@ -159,10 +159,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     private func showScoreBoard() {
         scoreBoard.updateData()
         scoreBoard.isHidden = false
+        self.physicsWorld.speed = 0
     }
     
     private func hideScoreBoard() {
         scoreBoard.isHidden = true
+        self.physicsWorld.speed = 1
     }
     
     @objc private func toggleScoreBoard() {
