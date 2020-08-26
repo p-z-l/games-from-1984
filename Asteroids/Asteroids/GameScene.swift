@@ -18,7 +18,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     private var asteroids: [SKSpriteNode] {
-        return self.children.filter { $0.name == "asteroid" } as! [SKSpriteNode]
+        return self.children.filter { $0.name == "asteroid" } as! [AsteroidNode]
     }
     private var bullets: [SKSpriteNode] {
         return self.children.filter { $0.name == "bullet" } as! [SKSpriteNode]
@@ -105,6 +105,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         // if a bullet hits an asteroid...
         if firstBody.node?.name == "bullet" && secondBody.node?.name == "asteroid" {
+            splitAsteroid(asteroid: secondBody.node as! AsteroidNode, bulletVelocity: firstBody.velocity)
             firstBody.node?.removeFromParent()
             secondBody.node?.removeFromParent()
         }
@@ -210,26 +211,75 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
-    private func generateRandomAsteroid(sizeClass: AsteroidClass) {
-        let asteroidNode = SKSpriteNode()
+    private func addAsteroid(
+        sizeClass: AsteroidClass,
+        position: CGPoint,
+        velocity: CGVector,
+        angularVelocity: CGFloat
+    ) {
+        let asteroidNode = AsteroidNode()
         asteroidNode.color = .white
         asteroidNode.size = sizeClass.cgsize
         asteroidNode.texture = sizeClass.sktexture
         asteroidNode.physicsBody = SKPhysicsBody(rectangleOf: asteroidNode.size)
         asteroidNode.physicsBody?.mass = 0.1
-        asteroidNode.physicsBody?.velocity = {
-            let magnitude = CGFloat.random(in: 20...40)
-            let dx = magnitude-CGFloat.random(in: 0...magnitude)
-            let dy = magnitude-dx
-            return CGVector(dx: dx, dy: dy)
-            }()
-        asteroidNode.physicsBody?.angularVelocity = .random(in: -2...2)
+        asteroidNode.physicsBody?.velocity = velocity
+        asteroidNode.physicsBody?.angularVelocity = angularVelocity
+        asteroidNode.physicsBody?.restitution = 0
+        asteroidNode.physicsBody?.angularDamping = 0
+        asteroidNode.physicsBody?.linearDamping = 0
+        asteroidNode.sizeClass = sizeClass
         asteroidNode.name = "asteroid"
-        asteroidNode.position = CGPoint(
-            x: .random(in: -self.size.width/2...self.size.width/2),
-            y: .random(in: -self.size.height/2...self.size.height/2)
-        )
+        asteroidNode.position = position
         self.addChild(asteroidNode)
+    }
+    
+    private func generateRandomAsteroid(sizeClass: AsteroidClass) {
+        addAsteroid(
+            sizeClass: sizeClass,
+            position: CGPoint(
+                x: .random(in: -self.size.width/2...self.size.width/2),
+                y: .random(in: -self.size.height/2...self.size.height/2)
+            ),
+            velocity: {
+                let magnitude = CGFloat.random(in: 20...40)
+                let dx = magnitude-CGFloat.random(in: 0...magnitude)
+                let dy = magnitude-dx
+                return CGVector(dx: dx, dy: dy)
+                }(),
+            angularVelocity: .random(in: -2...2)
+        )
+    }
+    
+    private func splitAsteroid(asteroid: AsteroidNode, bulletVelocity: CGVector) {
+        guard asteroid.physicsBody != nil,
+              let sizeClass = asteroid.sizeClass.lowerClass else { return }
+        for _ in 0...4 {
+            addAsteroid(
+                sizeClass: sizeClass,
+                position: {
+                    let x = asteroid.position.x
+                    let y = asteroid.position.y
+                    let width = asteroid.size.width
+                    let height = asteroid.size.height
+                    return CGPoint(
+                        x: x + .random(in: -width/2...width/2),
+                        y: y + .random(in: -height/2...height/2)
+                    )
+                }(),
+                velocity: {
+                    let baseDx = asteroid.physicsBody!.velocity.dx
+                    let baseDy = asteroid.physicsBody!.velocity.dy
+                    let xRandomOffset: CGFloat = .random(in: -10...10)
+                    let yRandomOffset: CGFloat = .random(in: -10...10)
+                    return CGVector(
+                        dx: baseDx + xRandomOffset,
+                        dy: baseDy + yRandomOffset
+                    )
+                }(),
+                angularVelocity: .random(in: -2...2)
+            )
+        }
     }
     
 }

@@ -25,4 +25,9 @@ enum AsteroidClass: Int {
     var sktexture: SKTexture? {
         return nil
     }
+    
+    var lowerClass: AsteroidClass? {
+        return AsteroidClass(rawValue: self.rawValue-1)
+    }
+    
 }
