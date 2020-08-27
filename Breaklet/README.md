@@ -1,6 +1,6 @@
 # Breaklet
 Re-creation of the classic Atari Breakout game on classic Macs.
-![Progress:80%](https://img.shields.io/badge/Progress-80%-green)
+![Progress:80%](https://img.shields.io/badge/Progress-80%25-orange)
 
 **Progress:** Mostly completed / Playable
 
