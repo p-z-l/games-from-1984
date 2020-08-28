@@ -11,6 +11,8 @@ import GameplayKit
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
     // MARK: - Properties
+    
+    // objects
     private lazy var spaceShip = SKSpriteNode()
     private lazy var spaceShipDirection : CGFloat = 0 { // in degrees 0~360
         didSet {
@@ -23,6 +25,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     private var bullets: [SKSpriteNode] {
         return self.children.filter { $0.name == "bullet" } as! [SKSpriteNode]
     }
+    private lazy var levelLabel = self.childNode(withName: "LevelField") as! SKLabelNode
+    // spaceship motions
     private var isAccelerating      = false
     private var isFiring            = false
     private var isTurningLeft       = false
@@ -33,6 +37,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     private let spaceShipCatagory : UInt32 = 0x1 << 0
     private let asteroidsCatagory : UInt32 = 0x1 << 1
     private let bulletsCatagory   : UInt32 = 0x1 << 2
+    // game & levels
+    private lazy var gameLevel : Int = 0 {
+        didSet {
+            updateLevelLabel()
+        }
+    }
     
     // MARK: - Life cycle
     
@@ -41,16 +51,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         initializeScene()
         initializeSpaceShip()
+        initializeLevelLabel()
+        
         spaceShipUpdateDirection()
-        
-        for _ in 0...3 {
-            generateRandomAsteroid(sizeClass: .large)
-        }
-        
-        for child in self.children {
-            child.physicsBody?.linearDamping = 0
-            child.physicsBody?.angularDamping = 0
-        }
     }
     
     override func update(_ currentTime: TimeInterval) {
@@ -58,6 +61,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         keepNodesInsideScene()
         updateSpaceShipMotion()
+        
+        levelUpIfNeeded()
     }
     
     override func keyDown(with event: NSEvent) {
@@ -91,6 +96,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     // MARK: - SKPhysicsContactDelegate
+    
     func didBegin(_ contact: SKPhysicsContact) {
         
         var firstBody: SKPhysicsBody
@@ -136,6 +142,29 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         spaceShip.physicsBody?.collisionBitMask = asteroidsCatagory
         spaceShip.physicsBody?.contactTestBitMask = asteroidsCatagory
         self.addChild(spaceShip)
+    }
+    
+    private func initializeLevelLabel() {
+        levelLabel.fontName = NSFont.systemFont(ofSize: 0).fontName
+        levelLabel.fontSize = 24
+    }
+    
+    private func updateLevelLabel() {
+        levelLabel.text = "Level: \(gameLevel)"
+    }
+    
+    private func levelUp() {
+        gameLevel += 1
+        
+        for _ in 0...gameLevel {
+            generateRandomAsteroid(sizeClass: .large)
+        }
+    }
+    
+    private func levelUpIfNeeded() {
+        if asteroids.isEmpty {
+            levelUp()
+        }
     }
     
     private func updateSpaceShipMotion() {
