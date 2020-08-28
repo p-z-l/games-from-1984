@@ -78,6 +78,22 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         default:
             break
         }
+        #if DEBUG // debug keys
+        switch event.characters {
+        case ",":
+            self.physicsWorld.speed -= 0.5
+        case ".":
+            self.physicsWorld.speed += 0.5
+        case "/":
+            self.physicsWorld.speed = 1
+        case "x":
+            for asteroid in asteroids {
+                asteroid.removeFromParent()
+            }
+        default:
+            break
+        }
+        #endif
     }
     
     override func keyUp(with event: NSEvent) {
